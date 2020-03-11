@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>#Built Not Bought</title>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid" style="background-color:#00F3FF" >
+  <div class="container">
+    <h1 class="display-4">Quarterly performance review submission (HR)</h1>
+    <p class="lead">Provide rating ranging from 1 to 10, 1 being the lowest and 10 being the highest</p>
+  </div>
+</div>
+    <!-- HR review table starts here -->
+    <form method="post" action="">
+      <p class="font-weight-bold">Reportee ID</p>
+        <select name="emp_id" class="custom-select form-control" required>
+            <option value="" disabled selected>Select Reportee ID</option>
+            <option value="{{results[0][0]}}">{{results[0][0]}}</option>
+        </select>
+    <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Sr No.</th>
+      <th>High Level KRA</th>
+      <th>Goal</th>
+      <th>Measure</th>
+      <th>Weightage</th>
+      <th>Self Rating</th>
+      <th>Reporitng Manager</th>
+        <th>Project Lead</th>
+        <th>Business Head</th>
+        <th>Human Resource</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3">1</th>
+      <td rowspan="3">Project Delivery</td>
+      <td >On Time Task Completion </td>
+      <td>Report from JIRA</td>
+      <td>25</td>
+      <td id ='Q1'>
+        <span>{{results[1][2]}}</span>
+      </td>
+      <td id ='Q1_RM'>
+        <span>{{results[2][2]}}</span>
+      </td>
+        <td id ='Q1_PL'>
+        <span>{{results[3][2]}}</span>
+      </td>
+        <td id ='Q1_BH'>
+        <span>{{results[4][2]}}</span>
+      </td>
+        <td>
+        <select name="Q1_HR" class="custom-select form-control" required>
+            <option value="" disabled selected>Give Rating</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+      </td>
+    </tr>
+    <tr>
+      <td >Project Management Portal Update</td>
+      <td></td>
+      <td>15</td>
+      <td id ='Q2'>
+        <span>{{results[1][3]}}</span>
+      </td>
+      <td id ='Q2_RM'>
+        <span>{{results[2][3]}}</span>
+      </td>
+         <td id ='Q2_PL'>
+        <span>{{results[3][3]}}</span>
+      </td>
+        <td id ='Q2_BH'>
+        <span>{{results[4][3]}}</span>
+      </td>
+        <td>
+        <select name="Q2_HR" class="custom-select form-control" required>
+            <option value="" disabled selected>Give Rating</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Quality As Per Customer Expectation</td>
+      <td>CRR (Customer Review Rating)  >75 %</td>
+      <td>20</td>
+      <td id ='Q3'>
+        <span>{{results[1][4]}}</span>
+      </td>
+      <td id ='Q3_RM'>
+        <span>{{results[2][4]}}</span>
+      </td>
+         <td id ='Q3_PL'>
+        <span>{{results[3][4]}}</span>
+      </td>
+        <td id ='Q3_BH'>
+        <span>{{results[4][4]}}</span>
+      </td>
+        <td>
+        <select name="Q3_HR" class="custom-select form-control" required>
+            <option value="" disabled selected>Give Rating</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+      </td>
+    </tr>
+
+    <tr>
+      <th rowspan="2">2</th>
+      <td rowspan="2">Complaince</td>
+      <td>Attendance in Zoho</td>
+      <td rowspan="2" class="align-middle">More than 95%</td>
+      <td>10</td>
+      <td id ='Q4'>
+          <span>{{results[1][5]}}</span>
+      </td>
+      <td id ='Q4_RM'>
+        <span>{{results[2][5]}}</span>
+      </td>
+         <td id ='Q4_PL'>
+        <span>{{results[3][5]}}</span>
+      </td>
+        <td id ='Q4_BH'>
+        <span>{{results[4][5]}}</span>
+      </td>
+        <td>
+        <select name="Q4_HR" class="custom-select form-control" required>
+            <option value="" disabled selected>Give Rating</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Timely reporting of expenses</td>
+      <td>5</td>
+      <td id ='Q5'>
+          <span>{{results[1][6]}}</span>
+      </td>
+      <td id ='Q5_RM'>
+        <span>{{results[2][6]}}</span>
+      </td>
+         <td id ='Q5_PL'>
+        <span>{{results[3][6]}}</span>
+      </td>
+        <td id ='Q5_BH'>
+        <span>{{results[4][6]}}</span>
+      </td>
+        <td>
+        <select name="Q5_HR" class="custom-select form-control" required>
+            <option value="" disabled selected>Give Rating</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+      </td>
+    </tr>
+
+    <tr>
+      <th rowspan="2">3</th>
+      <td rowspan="2">Project Documentation</td>
+      <td>Daily Project status/Contribution Report</td>
+      <td rowspan="2" class="align-middle">Audit Score >4</td>
+      <td>5</td>
+      <td id ='Q6'>
+          <span>{{results[1][7]}}</span>
+      </td>
+     <td id ='Q6_RM'>
+        <span>{{results[2][7]}}</span>
+      </td>
+         <td id ='Q6_PL'>
+        <span>{{results[3][7]}}</span>
+      </td>
+        <td id ='Q6_BH'>
+        <span>{{results[4][7]}}</span>
+      </td>
+        <td>
+        <select name="Q6_HR" class="custom-select form-control" required>
+            <option value="" disabled selected>Give Rating</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Project Documentation as required</td>
+      <td>5</td>
+      <td id ='Q7'>
+          <span>{{results[1][8]}}</span>
+      </td>
+      <td id ='Q7_RM'>
+        <span>{{results[2][8]}}</span>
+      </td>
+         <td id ='Q7_PL'>
+        <span>{{results[3][8]}}</span>
+      </td>
+        <td id ='Q7_BH'>
+        <span>{{results[4][8]}}</span>
+      </td>
+        <td>
+        <select name="Q7_HR" class="custom-select form-control" required>
+            <option value="" disabled selected>Give Rating</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+      </td>
+    </tr>
+
+    <tr>
+      <th rowspan="2">4</th>
+      <td rowspan="2">Certification/Learning</td>
+      <td>Tableau/Alteryx/Datawarehousing</td>
+      <td>Certification</td>
+      <td>5</td>
+      <td id ='Q8'>
+          <span>{{results[1][9]}}</span>
+      </td>
+     <td id ='Q8_RM'>
+        <span>{{results[2][9]}}</span>
+      </td>
+         <td id ='Q8_PL'>
+        <span>{{results[3][9]}}</span>
+      </td>
+        <td id ='Q8_BH'>
+        <span>{{results[4][9]}}</span>
+      </td>
+        <td>
+        <select name="Q8_HR" class="custom-select form-control" required>
+            <option value="" disabled selected>Give Rating</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Zoho Connect: minimun 10 post/qtr </td>
+      <td></td>
+      <td>5</td>
+
+      <td id ='Q9'>
+        <span>{{results[1][10]}}</span>
+      </td>
+      <td id ='Q9_RM'>
+        <span>{{results[2][10]}}</span>
+      </td>
+         <td id ='Q9_PL'>
+        <span>{{results[3][10]}}</span>
+      </td>
+        <td id ='Q9_BH'>
+        <span>{{results[4][10]}}</span>
+      </td>
+        <td>
+        <select name="Q9_HR" class="custom-select form-control" required>
+            <option value="" disabled selected>Give Rating</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+      </td>
+    </tr>
+
+    <tr>
+      <th>5</th>
+      <td>Trainings</td>
+      <td>Attend/ Organised In House Trainings</td>
+      <td>* L2 and L3 (Min 2/Qtr)<br>
+        * L0 and L1 (Minimum 4/Qtr</td>
+      <td class="align-middle">5</td>
+      <td id ='Q10'>
+          <span>{{results[1][11]}}</span>
+      </td>
+      <td id ='Q10_RM'>
+        <span>{{results[2][11]}}</span>
+      </td>
+         <td id ='Q10_PL'>
+        <span>{{results[3][11]}}</span>
+      </td>
+        <td id ='Q10_BH'>
+        <span>{{results[4][11]}}</span>
+      </td>
+        <td>
+        <select name="Q10_HR" class="custom-select form-control" required>
+            <option value="" disabled selected>Give Rating</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+    </select>
+      </td>
+    </tr>
+
+    <tr>
+      <th rowspan="2">6</th>
+      <td rowspan="2">Remarks</td>
+      <td>Areas of Appreciation</td>
+      <td></td>
+      <td></td>
+      <td id ='Q11'>
+          <span>{{results[1][12]}}</span>
+      </td>
+      <td id ='Q11_RM'>
+        <span>{{results[2][12]}}</span>
+      </td>
+         <td id ='Q11_PL'>
+        <span>{{results[3][12]}}</span>
+      </td>
+        <td id ='Q11_BH'>
+        <span>{{results[4][12]}}</span>
+      </td>
+        <td><textarea name="Q11_HR" class="form-control"  placeholder="What do you appreciate the most about this reportee?" required></textarea> </td>
+    </tr>
+
+    <tr>
+      <td>Opportunity</td>
+      <td></td>
+      <td></td>
+      <td id ='Q12'>
+          <span>{{results[1][13]}}</span>
+      </td>
+      <td id ='Q12_RM'>
+        <span>{{results[2][13]}}</span>
+      </td>
+         <td id ='Q12_PL'>
+        <span>{{results[3][13]}}</span>
+      </td>
+        <td id ='Q12_BH'>
+        <span>{{results[4][13]}}</span>
+      </td>
+        <td><textarea name="Q12_HR" class="form-control"  placeholder="What do you think this reportee should explore?" required></textarea> </td>
+
+    </tr>
+    <tr>
+        <td colspan="10"><button type="submit" style="background-color:#00F3FF" class="btn btn-block">Submit Rating</button></td>
+    </tr>
+  </tbody>
+</table>
+</form>
+
+<!-- HR review table ends here -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'signup.css')}}">
+      <script type="text/javascript">
+function checkPass()
+{
+    //Store the password field objects into variables ...
+    var password = document.getElementById('password2');
+    var confirm  = document.getElementById('confirm2');
+    //Store the Confirmation Message Object ...
+    var message = document.getElementById('confirm-message2');
+    //Set the colors we will be using ...
+    var good_color = "#4cbb17";
+    var bad_color  = "red";
+    //Compare the values in the password field
+    //and the confirmation field
+    if(password.value == confirm.value){
+        //The passwords match.
+        //Set the color to the good color and inform
+        //the user that they have entered the correct password
+        confirm.style.backgroundColor = good_color;
+        message.style.color           = good_color;
+        message.innerHTML             = '<img src="/static/correct.png" alt="Passwords Match!" width="100" height="60">';
+        message.innerHTML             = '<p>Passwords Matched!</p>';
+    }else{
+        //The passwords do not match.
+        //Set the color to the bad color and
+        //notify the user.
+        confirm.style.backgroundColor = bad_color;
+        message.style.color           = bad_color;
+       message.innerHTML             = '<img src="/static/wrong.png" alt="Passwords Do Not Match!" width="100" height="60">';
+       message.innerHTML             = '<p>Passwords Do Not Match!</p>';
+    }
+}
+</script>
+  </head>
+  <body onload="document.refresh();">
+<img src="{{url_for('static',filename = 'left_design.png')}}" class="img-fluid" alt="Responsive image" style = "height:650px">
+<form class="box" method="POST" action="">
+  <h1>Sign Up</h1>
+  <input type="email" name="email"  placeholder="CRG Email" required>
+    <div class="tutorial-wrapper">
+        <div class="field-wrapper"><label for="password2"></label>
+            <input type="password" placeholder="Enter Password" name="password" required id="password2" onkeyup="checkPass();">
+        </div>
+        <div class="field-wrapper">
+            <input type="password" placeholder="Re-Enter Password" name="confirm" required id="confirm2" onkeyup="checkPass();">
+            <span id="confirm-message2" class="confirm-message"></span>
+        </div>
+</div>
+  <input type="submit" name="" value="Sign me up">
+</form>
+  </body>
+</html>

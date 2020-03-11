@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Card</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron jumbotron-fluid" style="background-color:#007fff">
+  <div class="container">
+    <h1 class="display-4"><font color="white">Welcome to <strong>CRG Quarterly Review</strong></font></h1>
+    <p class="lead"><font color="white">Depending on your designation, choose the option below.</font></p>
+  </div>
+</div>
+<p></p>
+<p></p>
+
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <font color="black">Submit self review</font>
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="jumbotron">
+        <p class="card-text"><strong>Submit your self rating for this quarter</strong></p>
+         <td><a href="{{ url_for('g3_self_form') }}"><button type="submit" style="background-color:white" class="btn btn-block">Submit Rating</button></a></td>
+      </div>
+
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <font color="black">Submit review as Reporting Manager</font>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="jumbotron">
+        <p class="card-text">Select the reportee to give his/her ratings for this quarter as Reporting Manager</p>
+          <form method="post" action="">
+      <select name="reportee_id" class="custom-select form-control" required>
+        <option value="" disabled selected>Select your reportee</option>
+        {% for each in results[0] %}
+        <option value="{{each}}">{{each}}</option>
+        {% endfor %}
+        </select>
+          <td><button type="submit" style="background-color:white" class="btn btn-block">Submit Rating</button></td>
+          </form>
+ </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <font color="black">Submit review as Project Lead</font>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+
+      <div class="jumbotron">
+        <p class="card-text">Select the reportee to give his/her ratings for this quarter as Project Lead</p>
+        <form method="post" action="">
+      <select name="reportee_id_pl" class="custom-select form-control" required>
+        <option value="" disabled selected>Select your reportee</option>
+        {% for each in results[1] %}
+        <option value="{{each}}">{{each}}</option>
+        {% endfor %}
+        </select>
+          <td><button type="submit" style="background-color:white" class="btn btn-block">Submit Rating</button></td>
+          </form>
+     </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+          <font color="black">Submit review as Business Head</font>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+
+      <div class="jumbotron">
+        <p class="card-text">Select the reportee to give his/her ratings for this quarter as Business Head</p>
+        <form method="post" action="">
+      <select name="reportee_all" class="custom-select form-control" required>
+        <option value="" disabled selected>Select your reportee</option>
+        {% for each in results[3] %}
+        <option value="{{each}}">{{each}}</option>
+        {% endfor %}
+        </select>
+          <td><button type="submit" style="background-color:white" class="btn btn-block">Submit Rating</button></td>
+          </form>
+     </div>
+    </div>
+
+    <div class="card">
+    <div class="card-header" id="headingFive">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+          <font color="black">Submit review as HR</font>
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+
+      <div class="jumbotron">
+        <p class="card-text">Select the reportee to give his/her ratings for this quarter as HR</p>
+        <form method="post" action="">
+      <select name="reportee_all_hr" class="custom-select form-control" required>
+        <option value="" disabled selected>Select your employee</option>
+        {% for each in results[2] %}
+        <option value="{{each}}">{{each}}</option>
+        {% endfor %}
+        </select>
+          <td><button type="submit" style="background-color:white" class="btn btn-block">Submit Rating</button></td>
+          </form>
+     </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

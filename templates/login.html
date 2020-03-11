@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Built not Bought</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'login.css')}}">
+  </head>
+  <body onload="document.refresh();">
+    <div id="imgdiv2">
+    <img src="{{url_for('static',filename = 'CRG Logo SIgn.jpg')}}" class="img-fluid" alt="Responsive image">
+    </div>
+<div class="formsdiv">
+<form class="box" method="POST" action="">
+<hr>
+  <h1>CRG Review Portal Login</h1>
+  <h3>Welcome to CRG quarterly review process. Please login with CRG email id to receive OTP.</h3>
+  <input type="email" name="email"  required placeholder="Enter your CRG E-mail">
+  <input type="submit" name="" value="Login">
+<hr>
+</form>
+</div>
+<div class="imgdiv">
+<img src="{{url_for('static',filename = 'output-onlinejpgtools.png')}}" class="img-fluid" alt="Responsive image">
+</div>
+  </body>
+</html>

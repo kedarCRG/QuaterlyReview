@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'otp.css')}}">
+  </head>
+  <body onload="document.refresh();">
+<img src="{{url_for('static',filename = 'left_design.png')}}" class="img-fluid" alt="Responsive image" style = "height:650px">
+<form class="box" method="POST" action="" autocomplete="off">
+  <h4>An OTP is sent on your CRG email id: {{data}}</h4>
+  <input maxlength="6" type="text" name="otp_num" placeholder="Enter OTP" required>
+  <input type="submit" name="" value="Submit">
+</form>
+  </body>
+</html>

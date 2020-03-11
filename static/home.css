@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header .navbar{
+    height: 150px;
+    background-color: #FFFFFF;
+}
+header .navbar .nav-item a{
+    font-family: 'Coiny', cursive;
+    color: #FE0000;
+    font-size: 30px;
+}
+header .navbar .nav-item li{
+    float: right;
+}
+.logo{
+    height: 200px;
+    max-width 200px;
+}
+
+.banner_1{
+    margin-top: 50px;
+}
+
+.banner_1 h1{
+    font-family:'Raleway', sans-serif;
+    font-size: 120px;
+    color: #FF6600;
+    margin-top: -50px;
+}
+.banner_1 h2{
+    font-family:'Raleway', sans-serif;
+    font-size: 90px;
+    color: #FE0000;
+    margin-top: -10px;
+}
+.banner_1 h3{
+    font-family:'Raleway', sans-serif;
+    font-size: 60px;
+    color: #FE0000;
+    margin: 0;
+
+}
+
+.banner_1 > .banner_img{
+    float:left;
+    margin-top:-30px;
+}
+
+.banner_text{
+    float:center;
+    margin: 0;
+}
+.login_btn{
+    background-color:#FF6600;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 35px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none
+    font-size: 100px;
+    font-weight:  bold;
+    width: 200px;
+    height:  50px;
+    float: right;
+    margin-right: 10px
+
+}
+
+.full_footer{
+    height: 400px;
+    margin: 0;
+    background-color: #FF6600;
+}
+.banner_2{
+    background-color: #FFFFFF;
+}
+/*side navigation*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+span{
+margin-top: 40px;
+margin-right: 30px;
+float: right;
+}
+span:hover{
+    color: red;
+}

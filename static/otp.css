@@ -1,0 +1,75 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #ffffff;
+}
+.box{
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background:#47a4c4;
+  text-align: center;
+  border-radius:25px;
+}
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box h4{
+  color: white;
+  font-weight: 300;
+}
+.box h6{
+  color: white;
+  font-weight: 100;
+}
+.box h6:hover{
+  color: black;
+  font-weight: 100;
+}
+.box input[type = "text"],.box input[type = "password"],.box input[type = "email"],select{
+  border:0;
+  background: #ffffff;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid ##ffffff;
+  padding: 14px 10px;
+  width: 200px;
+  outline: #ffffff;
+  color: #2f2e31;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus{
+  width: 280px;
+  border-color: #000000;
+}
+.box input[type = "submit"]{
+  border:0;
+  background-color:#0D47A1;
+  border: 5px solid black;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: none;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.link_to_signup{
+  color: #ffffff;
+  text-decoration: none;
+}
+.link_to_signup :hover{
+  color: #603ad8;
+}

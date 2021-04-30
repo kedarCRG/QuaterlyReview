@@ -34,7 +34,7 @@ SQLAlchemy-Utils==0.34.2
 tabula==1.0.5
 tabula-py==1.4.1
 tkfilebrowser==2.3.2
-urllib3==1.25.6
+urllib3==1.25.8
 URLObject==2.4.3
 Werkzeug==0.16.0
 xlrd==1.2.0
